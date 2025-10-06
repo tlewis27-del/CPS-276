@@ -3,6 +3,22 @@ class Calculator {
 
     public function calc($operator = null, $num1 = null, $num2 = null) {
 
+        //1) Explain the purpose of require_once "Calculator.php"; in th index.php page. What would be the difference if 
+        //// include or require were used instead of require_once?
+
+        //2) How does the divide method specifically prevent and report an error for division by zero? Why is this a critical
+        //// consideration in calculator applications?
+
+        //3) If you were tasked with adding a new mathematical operation (e.g., exponentiation ^) to this calculator, what
+        //// specific modifications would be required in both Calculator.php?
+
+        //4) Explain the difference between the Calculator class and the $Calculator object. Why do we create an instance
+        //// of the class?
+
+        //5) Why is it important to check that the last two parameters are numbers in our Calculator class?
+        //// Index.php handles the display of the results using HTML, while Calculator.php contains the core calculation logic.
+        //// Discuss the importance of separating user interface (presentation) concerns from business logic.
+
         // checks for correct amount of arguments
         if (func_num_args() != 3) {
             return "<p>Cannot perform operation. You must have three arguments. A string for the operator (+,-,*,/) and two integers or floats for the numbers.</p>";
