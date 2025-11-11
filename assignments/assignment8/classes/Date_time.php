@@ -2,6 +2,7 @@
 require_once 'Pdo_methods.php';
 
 //Why are we using timestamps instead of the date?
+
 //Is there any advantage to using the Date_time class over just having a PHP function file.  What are they?
 
 //When a user requests to view notes within a specific date range, what logical steps must the application take 
