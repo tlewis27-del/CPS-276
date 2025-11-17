@@ -4,7 +4,7 @@
 
 //Why is JSON commonly used for API responses? What are the benefits of using JSON over other data formats like XML?
 
-//Explain the difference between a REST API client and a REST API server. What role does this code play in that relationship?
+//(duplicate question)Explain the difference between a REST API client and a REST API server. What role does this code play in that relationship?
 
 //How should an application handle different types of API responses (success, error, empty data)? What considerations are 
 //important for each scenario?
@@ -93,9 +93,10 @@ function getWeather()
     }
 
 
-    $output .= "<p><strong>Up to three cities where temperatures are lower than $cityName</strong></p>";
-
     if (!empty($lowerTemps)) {
+
+        $output .= "<p><strong>Up to three cities where temperatures are lower than $cityName</strong></p>";
+
         $lowerTemps = array_slice($lowerTemps, 0, 5);
 
         $output .= '<table class="table table-striped">';
@@ -109,9 +110,13 @@ function getWeather()
         }
 
         $output .= '</tbody></table>';
+
     } else {
-        $output .= "<p>There are no cities with temperatures lower than $cityName.</p>";
-    }
+
+        $output .= "<p><strong>There are no cities with temperatures lower than $cityName.</strong></p>";
+
+}
+
 
     return [$acknowledgement, $output];
 }
